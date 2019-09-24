@@ -24,6 +24,7 @@ class Show < ActiveRecord::Base
      Show.where("rating > 3")
   end 
   
-  def  Show::shows_by_alphabetical_order
+  def  Show::shows_by_alphabetical_order 
+    Show.all.sort_by{|show| show.name}
   end
 end
